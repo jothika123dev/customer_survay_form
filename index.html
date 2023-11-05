@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-image: url('images/bg.png');">
+    <h2 style="text-align: center;">Customer Survey Form</h2>
+    <form id="surveyForm" class="survey-form">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span class="error"  id="error-firstName"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span class="error" id="error-lastName"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <span class="error" id="error-dob"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country"  name="country" required>
+                <option value="">Select Country</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="Spain">Spain</option>
+                <option value="Japan">Japan</option>
+                <option value="China">China</option>
+                <option value="India">India</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Mexico">Mexico</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Russia">Russia</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Norway">Norway</option>
+                <option value="Denmark">Denmark</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Greece">Greece</option>
+         </select>
+         <span class="error" id="error-country"></span>
+        </div>
+        
+
+        <div class="form-group">
+            <label style="padding-bottom: 12px;">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male"> <label class="chkbox "for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female"> <label class="chkbox" for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other"> <label class="chkbox" for="other">Other</label><br>
+            
+            <span class="error" id="error-gender"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+            <span class="error" id="error-profession"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="error-email"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="number" id="mobile" name="mobile" required>
+            <span  class="error" id="error-mobile"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="submitbtn" onclick="validateForm()">Submit</button>
+            <button type="button" class="resetbtn" onclick="resetForm()">Reset</button>
+        </div>
+    </form>
+
+    <!-- Popup for displaying submitted values -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3>Survey Form Results</h3>
+            <p>First Name: <span id="resultFirstName"></span></p>
+            <p>Last Name: <span id="resultLastName"></span></p>
+            <p>Date of Birth: <span id="resultDOB"></span></p>
+            <p>Country: <span id="resultCountry"></span></p>
+            <p>Gender: <span id="resultGender"></span></p>
+            <p>Profession: <span id="resultProfession"></span></p>
+            <p>Email: <span id="resultEmail"></span></p>
+            <p>Mobile Number: <span id="resultMobile"></span></p>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
