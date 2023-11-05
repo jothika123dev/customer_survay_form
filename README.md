@@ -35,4 +35,3 @@ Follow these steps to set up and use the Customer Survey Form:
 
 - Jothika M
 - Contact: jothikamageshwaran@gmail.com
-- Software Developer 
