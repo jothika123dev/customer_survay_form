@@ -24,10 +24,6 @@ Follow these steps to set up and use the Customer Survey Form:
 1. Fill out the survey form with accurate details.
 2. Click the "Submit" button to store and display the survey results.
 
-## Screenshot
-
-![Customer Survey Form](screenshot.png)
-
 ## Technologies Used
 
 - HTML
